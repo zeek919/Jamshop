@@ -1,13 +1,14 @@
 import React from "react"
 
-import Header from "../components/Header"
+import Header from "../components/Header";
+import {Wrapper, Main } from './StyledComponents';
 
 export default function Layout({ children }) {
   return (
-    <>
+    <Wrapper>
       <Header />
-      <main>{children}</main>
+      <Main>{children}</Main>
       <footer />
-    </>
+    </Wrapper>
   )
 }
