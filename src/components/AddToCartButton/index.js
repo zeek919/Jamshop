@@ -1,6 +1,6 @@
 import React from "react"
-import { Link } from "gatsby"
+import { CircleAddButton } from "./StyledComponents"
 
 export default function AddToCartButton() {
-
+  return <CircleAddButton>+</CircleAddButton>
 }

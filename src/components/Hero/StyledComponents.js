@@ -4,8 +4,9 @@ export const Section = styled.section`
   margin: 0;
   display: flex;
   justify-content: space-between;
-  width: 100%;
-  position: absolute;
+  width: 100vw;
+  height: auto;
+  position: relative;
   top: 0;
   right: 0;
 `
@@ -17,26 +18,38 @@ export const HeroWrapper = styled.div`
   color: #e4e3e3;
   font-family: Georgia, sans-serif;
   font-weight: 700;
-  font-size: 36px;
+  font-size: 28px;
 `
 
 export const HeroMainWrapper = styled.div`
-  display: flex-reverse;
-  margin-top: 6em;
-  margin-right: -2em;
+  display: flex;
+  flex-direction: column;
+  left: 50%;
+  margin-right: 13vw;
 `
 
 export const Decor = styled.img`
-  margin-top: 6em;
-  margin-right: -2em;
+  position: relative;
+  margin-left: 20vw;
+  margin-top: 10vw;
 `
 
 export const HeroImageComponent = styled.img`
-  margin-left: 10vw;
+  margin-left: 15vw;
+  width: 30vw;
   margin-top: 164px;
 `
 
 export const HeroBackgroundComponent = styled.img`
+  position: absolute;
+  top: 0;
+  right: 0;
   display: flex;
+  width: 25vw;
   align-self: flex-start;
+  z-index: -1;
+`
+
+export const H1 = styled.h1`
+  margin-top: -1vw;
 `

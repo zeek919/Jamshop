@@ -5,7 +5,7 @@ module.exports = {
     author: "@bejamasio",
   },
   plugins: [
-    'gatsby-plugin-styled-components',
+    "gatsby-plugin-styled-components",
     "gatsby-plugin-react-helmet",
     {
       resolve: "gatsby-source-filesystem",
@@ -26,6 +26,27 @@ module.exports = {
         theme_color: "#663399",
         display: "minimal-ui",
         icon: "./src/assets/images/icon.png", // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: "gatsby-source-graphql",
+      options: {
+        typeName: "JAMSHOP",
+        fieldName: "jamshop",
+        url:
+          "https://api-eu-central-1.graphcms.com/v2/ckho3c5wo495m01z49fvv6via/master",
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-fonts-v2`,
+      options: {
+        fonts: [
+          {
+            family: "Montserrat",
+            variable: true,
+            weights: ["200..900"],
+          },
+        ],
       },
     },
   ],
