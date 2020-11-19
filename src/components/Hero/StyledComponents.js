@@ -53,3 +53,7 @@ export const HeroBackgroundComponent = styled.img`
 export const H1 = styled.h1`
   margin-top: -1vw;
 `
+
+export const ButtonPosition = styled.div`
+  margin-left: -10%;
+`

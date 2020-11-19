@@ -10,12 +10,14 @@ export const Wrapper = styled.div`
   border: 2px solid #f5f5f5;
   border-radius: 4px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: flex-start;
 `
 
 export const Inner = styled.table`
   display: flex;
+  align-self: center;
   align-items: flex-start;
   justify-content: space-evenly;
   width: 80%;
@@ -42,4 +44,10 @@ export const Inner = styled.table`
 
 export const Tbody = styled.tbody`
   width: 100%;
+`
+
+export const ButtonPosition = styled.div`
+  margin: 5px;
+  padding: 10px;
+  align-self: flex-end;
 `

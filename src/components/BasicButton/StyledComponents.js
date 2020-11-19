@@ -1,15 +1,15 @@
-import styled from 'styled-components';
+import styled from "styled-components"
 
 const Button = styled.button`
-  width: 10em;
-  height: 3em;
+  width: ${({ smaller }) => (smaller ? "8em" : "10em")};
+  height: ${({ smaller }) => (smaller ? "2em" : "3em")};
   text-transform: uppercase;
-  background-color: #AB528D;
+  background-color: #ab528d;
   border: none;
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 13px;
-  border-radius: 4px;
-  margin-left: -30px;
-`;
+  border-radius: ${({ smaller }) => (smaller ? "0px" : "4px")};
+  font-weight: 700;
+`
 
-export default Button;
+export default Button

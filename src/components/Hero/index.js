@@ -11,16 +11,15 @@ import {
   HeroImageComponent,
   HeroBackgroundComponent,
   H1,
+  ButtonPosition,
 } from "./StyledComponents"
 import BasicButton from "../BasicButton"
-import Cart from "../Cart"
 
 function HomepageHero() {
   return (
     <Section>
       <HeroImageComponent src={HeroImage} alt="Vector Monitor" />
       <HeroWrapper>
-        <Cart />
         <HeroMainWrapper>
           <Decor src={HeroDecor} />
           <H1>
@@ -28,9 +27,11 @@ function HomepageHero() {
             <br />
             on boring things
           </H1>
-          <BasicButton onClickHandler={() => console.log(true)}>
-            GO EXPLORE
-          </BasicButton>
+          <ButtonPosition>
+            <BasicButton onClickHandler={() => console.log(true)}>
+              GO EXPLORE
+            </BasicButton>
+          </ButtonPosition>
         </HeroMainWrapper>
         <HeroBackgroundComponent src={HeroBackground} />
       </HeroWrapper>

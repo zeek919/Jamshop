@@ -43,6 +43,7 @@ module.exports = {
         fonts: [
           // eslint-disable-next-line
           `Montserrat\:200,400,500,600,700,900`,
+          `Roboto\:400,700`,
         ],
         display: "swap",
       },

@@ -14,17 +14,22 @@ import { useDispatch } from "react-redux"
 import { AddProductToCart } from "../../store/CardManagment/actions"
 
 export default function ProductCard({
-  data: { name, price, excerpt, image },
+  data: { name, price, excerpt, slug, image },
   order,
 }) {
   const dispatch = useDispatch()
 
-  const addButtonHandler = () => {
+  const addButtonHandler = (e) => {
+    e.preventDefault()
     dispatch(AddProductToCart({ name, price }))
   }
 
   return (
-    <Wrapper flexOrder={order}>
+    <Wrapper
+      flexOrder={order}
+      to={`/${slug}`}
+      onClick={(e) => e.stopPropagation()}
+    >
       <img src={temporary} />
       <DataWrapper>
         <TextWrapper>

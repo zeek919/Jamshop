@@ -1,6 +1,7 @@
 import styled from "styled-components"
+import { Link } from "gatsby"
 
-export const Wrapper = styled.div`
+export const Wrapper = styled(Link)`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -12,6 +13,12 @@ export const Wrapper = styled.div`
   order: ${(props) => props.flexOrder};
   flex: 1 0 21%;
   margin: 0 2%;
+
+  &:visited,
+  &:link,
+  &:focus {
+    text-decoration: none;
+  }
 `
 
 export const DataWrapper = styled.div`
