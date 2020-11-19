@@ -1,1 +1,2 @@
-export const 
+export const ADD_TO_CART = "ADD_TO_CART"
+export const CHANGE_MODAL_STATE = "CHANGE_MODAL_STATE"

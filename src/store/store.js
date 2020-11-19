@@ -1,3 +1,7 @@
-import { createStore } from "redux"
+import { applyMiddleware, createStore } from "redux"
+import { CardManagementReducer } from "./CardManagment/reducer"
+import logger from "redux-logger"
 
-const store = createStore()
+const store = createStore(CardManagementReducer, applyMiddleware(logger))
+
+export default store

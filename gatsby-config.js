@@ -38,15 +38,13 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-fonts-v2`,
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          {
-            family: "Montserrat",
-            variable: true,
-            weights: ["200..900"],
-          },
+          // eslint-disable-next-line
+          `Montserrat\:200,400,500,600,700,900`,
         ],
+        display: "swap",
       },
     },
   ],

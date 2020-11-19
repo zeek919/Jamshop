@@ -10,11 +10,19 @@ import {
 import temporary from "../../assets/products/dumy.svg"
 import AddToCartButton from "../AddToCartButton"
 import PropTypes from "prop-types"
+import { useDispatch } from "react-redux"
+import { AddProductToCart } from "../../store/CardManagment/actions"
 
 export default function ProductCard({
   data: { name, price, excerpt, image },
   order,
 }) {
+  const dispatch = useDispatch()
+
+  const addButtonHandler = () => {
+    dispatch(AddProductToCart({ name, price }))
+  }
+
   return (
     <Wrapper flexOrder={order}>
       <img src={temporary} />
@@ -24,7 +32,7 @@ export default function ProductCard({
           <P>{excerpt}</P>
         </TextWrapper>
         <ButtonWrapper>
-          <AddToCartButton />
+          <AddToCartButton onClickHandler={addButtonHandler} />
         </ButtonWrapper>
       </DataWrapper>
     </Wrapper>

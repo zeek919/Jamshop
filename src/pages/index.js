@@ -1,10 +1,11 @@
 import React from "react"
-import { createGlobalStyle, injectGlobal } from "styled-components"
-import "../layouts/layout.css"
+import { createGlobalStyle } from "styled-components"
 import Layout from "../layouts"
 import SEO from "../components/SEO"
 import Hero from "../components/Hero"
 import ProductList from "../components/ProductList"
+import Modal from "../components/Modal"
+import CartOpened from "../components/CartOpened"
 
 const GlobalStyle = createGlobalStyle`
 
@@ -26,6 +27,9 @@ export default function IndexPage() {
     <>
       <GlobalStyle />
       <Layout>
+        <Modal>
+          <CartOpened />
+        </Modal>
         <SEO title="Home" />
         <Hero />
         <ProductList />

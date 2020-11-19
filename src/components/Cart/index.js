@@ -1,12 +1,22 @@
 import React from "react"
 import CartIcon from "../../assets/elements/cart_icon.svg"
-import { CartWrapper, ProductCount } from "./StyledComponents"
+import { CartWrapper, ProductCount, Img } from "./StyledComponents"
+import { useDispatch, useSelector } from "react-redux"
+import { CHANGE_MODAL_STATE } from "../../store/CardManagment/types"
 
 export default function Cart() {
+  const dispatch = useDispatch()
+  const countOfItems = useSelector((state) => state.cardsData.length)
+  const openModalHandler = () => {
+    if (countOfItems > 0) {
+      dispatch({ type: CHANGE_MODAL_STATE })
+    }
+  }
+
   return (
-    <CartWrapper>
-      <img src={CartIcon} />
-      <ProductCount>1</ProductCount>
+    <CartWrapper onClick={() => openModalHandler()}>
+      <Img src={CartIcon} />
+      <ProductCount isEmpty={countOfItems}>{countOfItems}</ProductCount>
     </CartWrapper>
   )
 }
