@@ -26,11 +26,3 @@ export default function ProductQuery({ orderStart }) {
     />
   )
 }
-//
-// products.map((product, index) => (
-//   <ProductCard
-//     data={product}
-//     key={product.name}
-//     order={() => orderStart(index)}
-//   />
-// ))

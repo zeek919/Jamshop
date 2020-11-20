@@ -6,6 +6,8 @@ import {
   P,
   H3,
   ButtonWrapper,
+  Img,
+  ImgPosition,
 } from "./StyledComponents"
 import temporary from "../../assets/products/dumy.svg"
 import AddToCartButton from "../AddToCartButton"
@@ -30,7 +32,9 @@ export default function ProductCard({
       to={`/${slug}`}
       onClick={(e) => e.stopPropagation()}
     >
-      <img src={temporary} />
+      <ImgPosition>
+        <Img src={temporary} alt={image} />
+      </ImgPosition>
       <DataWrapper>
         <TextWrapper>
           <H3>{name}</H3>

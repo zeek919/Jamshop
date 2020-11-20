@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { device } from "../../styles/Constants"
 
 export const Wrapper = styled.section`
   width: 100vw;
@@ -7,11 +8,23 @@ export const Wrapper = styled.section`
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  @media ${device.laptopS} {
+    margin-top: 70px;
+    padding-bottom: 70px;
+    justify-content: center;
+    flex-direction: column;
+  }
 `
 
 export const Img = styled.img`
   width: 40em;
   margin: 0 5vw;
+  @media ${device.laptop} {
+    width: 60%;
+  }
+  @media ${device.laptopS} {
+    width: 80%;
+  }
 `
 
 export const Information = styled.div`
@@ -19,6 +32,12 @@ export const Information = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   width: auto;
+  @media ${device.laptop} {
+    align-items: center;
+    margin-top: 50px;
+  }
+ 
+}
 `
 
 export const Tag = styled.div`

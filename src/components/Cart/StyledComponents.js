@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import { fadeFromUp } from "../../styles/Animations"
+import { device } from "../../styles/Constants"
 
 export const CartWrapper = styled.button`
   position: absolute;
@@ -22,6 +23,14 @@ export const CartWrapper = styled.button`
   opacity: 0;
   animation: ${fadeFromUp} 1s 0.5s ease-in-out;
   animation-fill-mode: forwards;
+
+  @media ${device.laptop} {
+    right: 5em;
+  }
+
+  @media ${device.mobile} {
+    right: 0em;
+  }
 `
 
 export const ProductCount = styled.div`

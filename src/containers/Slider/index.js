@@ -35,12 +35,10 @@ export default function Slider({ productData }) {
   ))
 
   return (
-    <>
-      <Container>
-        <ArrowButton reversed onClick={handlePrev} />
-        <Inner>{renderSliders}</Inner>
-        <ArrowButton onClick={handleNext} />
-      </Container>
-    </>
+    <Container>
+      <ArrowButton reversed onClick={handlePrev} />
+      <Inner>{renderSliders}</Inner>
+      <ArrowButton onClick={handleNext} />
+    </Container>
   )
 }

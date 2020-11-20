@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import { fadeInUp, slideIn } from "../../styles/Animations"
+import { device } from "../../styles/Constants"
 
 export const Section = styled.section`
   margin: 0;
@@ -10,10 +11,15 @@ export const Section = styled.section`
   position: relative;
   top: 0;
   right: 0;
+
+  @media ${device.laptop} {
+    flex-direction: column;
+  }
 `
 
 export const HeroWrapper = styled.div`
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   color: #e4e3e3;
@@ -25,8 +31,19 @@ export const HeroWrapper = styled.div`
 export const HeroMainWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  left: 50%;
   margin-right: 13vw;
+
+  @media ${device.laptop} {
+    align-self: center;
+    margin: 0;
+    width: 40vw;
+  }
+
+  @media ${device.mobile} {
+    align-self: center;
+    margin: 0;
+    width: 100vw;
+  }
 `
 
 export const Decor = styled.img`
@@ -35,6 +52,12 @@ export const Decor = styled.img`
   margin-top: 10vw;
   animation-fill-mode: backwards;
   animation: ${fadeInUp} 1s ease-in-out;
+
+  @media ${device.laptop} {
+    align-self: center;
+    display: none;
+    width: 40vw;
+  }
 `
 
 export const HeroImageComponent = styled.img`
@@ -44,6 +67,18 @@ export const HeroImageComponent = styled.img`
   opacity: 0;
   animation: ${fadeInUp} 1s 1.5s ease-in-out;
   animation-fill-mode: forwards;
+
+  @media ${device.laptop} {
+    align-self: center;
+    margin-left: 0;
+    width: 40vw;
+  }
+
+  @media ${device.mobile} {
+    align-self: center;
+    margin-left: 0;
+    width: 60vw;
+  }
 `
 
 export const HeroBackgroundComponent = styled.img`
@@ -56,6 +91,10 @@ export const HeroBackgroundComponent = styled.img`
   z-index: -1;
   transition: 0.5s;
   animation: ${slideIn} 1s ease-in-out;
+
+  @media ${device.laptop} {
+    width: 35vw;
+  }
 `
 
 export const H1 = styled.h1`
@@ -63,6 +102,16 @@ export const H1 = styled.h1`
   opacity: 0;
   animation: ${fadeInUp} 1s 0.5s ease-in-out;
   animation-fill-mode: forwards;
+
+  @media ${device.laptop} {
+    margin-top: 3em;
+    text-align: center;
+    font-size: 28px;
+  }
+
+  @media ${device.mobile} {
+    font-size: 22px;
+  }
 `
 
 export const ButtonPosition = styled.div`
@@ -70,4 +119,15 @@ export const ButtonPosition = styled.div`
   opacity: 0;
   animation: ${fadeInUp} 1s 1s ease-in-out;
   animation-fill-mode: forwards;
+
+  @media ${device.laptop} {
+    display: flex;
+    justify-content: center;
+    margin-left: 0;
+    width: 40vw;
+  }
+
+  @media ${device.mobile} {
+    width: 100vw;
+  }
 `

@@ -1,6 +1,7 @@
 import { Link } from "gatsby"
 import styled from "styled-components"
 import { fadeFromUp } from "../../styles/Animations"
+import { device } from "../../styles/Constants"
 
 export const Wrapper = styled.div`
   margin-top: 17px;
@@ -19,4 +20,9 @@ export const HeaderLink = styled(Link)`
   text-decoration: none;
   margin-top: 17px;
   margin-left: 57px;
+
+  @media ${device.mobile} {
+    margin-left: 1em;
+    font-size: 16px;
+  }
 `

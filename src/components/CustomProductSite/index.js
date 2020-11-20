@@ -44,7 +44,3 @@ export default function CustomProductSite({
     </Layout>
   )
 }
-
-// dispatch(
-//   AddProductToCart({ name: name, price: price })
-// )
