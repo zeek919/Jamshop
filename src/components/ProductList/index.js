@@ -37,14 +37,14 @@ export default function ProductList() {
         <P>Updated daily based on most popular choices among dev community</P>
       </TextWrapper>
       <ProductsWrapper>
-        <ArrowButton
-          onClickHandler={() => handleChangeStartPoint("-")}
-          reversed
-        />
+        {/*<ArrowButton*/}
+        {/*  onClickHandler={() => handleChangeStartPoint("-")}*/}
+        {/*  reversed*/}
+        {/*/>*/}
         <CardsWrapper>
           <ProductQuery orderStart={(idx) => handleChangeOrder(idx)} />
         </CardsWrapper>
-        <ArrowButton onClickHandler={() => handleChangeStartPoint("+")} />
+        {/*<ArrowButton onClickHandler={() => handleChangeStartPoint("+")} />*/}
       </ProductsWrapper>
     </Wrapper>
   )

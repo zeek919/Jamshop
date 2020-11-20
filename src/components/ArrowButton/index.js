@@ -2,9 +2,9 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Button, Line } from "./StyledComponents"
 
-export default function ArrowButton({ onClickHandler, reversed }) {
+export default function ArrowButton({ onClick, reversed }) {
   return (
-    <Button reversed={reversed} onClick={onClickHandler}>
+    <Button reversed={reversed} onClick={onClick}>
       <Line rotate={45} />
       <Line rotate={-45} />
     </Button>
@@ -12,7 +12,7 @@ export default function ArrowButton({ onClickHandler, reversed }) {
 }
 
 ArrowButton.propTypes = {
-  onClickHandler: PropTypes.func.isRequired,
+  onClick: PropTypes.func.isRequired,
   reversed: PropTypes.bool,
 }
 

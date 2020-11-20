@@ -1,6 +1,7 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import ProductCard from "../../components/ProductCard"
+import Slider from "../Slider"
 
 export default function ProductQuery({ orderStart }) {
   return (
@@ -21,15 +22,15 @@ export default function ProductQuery({ orderStart }) {
           }
         }
       `}
-      render={({ jamshop: { products } }) =>
-        products.map((product, index) => (
-          <ProductCard
-            data={product}
-            key={product.name}
-            order={() => orderStart(index)}
-          />
-        ))
-      }
+      render={({ jamshop: { products } }) => <Slider productData={products} />}
     />
   )
 }
+//
+// products.map((product, index) => (
+//   <ProductCard
+//     data={product}
+//     key={product.name}
+//     order={() => orderStart(index)}
+//   />
+// ))
