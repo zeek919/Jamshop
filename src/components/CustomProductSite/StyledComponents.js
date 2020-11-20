@@ -5,12 +5,12 @@ export const Wrapper = styled.section`
   height: 100%;
   background-color: #1c042e;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
 `
 
 export const Img = styled.img`
-  width: 30em;
+  width: 40em;
   margin: 0 5vw;
 `
 
@@ -18,11 +18,7 @@ export const Information = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  width: 50vw;
-
-  * > button {
-    margin-left: 0;
-  }
+  width: auto;
 `
 
 export const Tag = styled.div`
@@ -32,6 +28,7 @@ export const Tag = styled.div`
   font-weight: normal;
   font-size: 14px;
   text-transform: uppercase;
+  width: 50%;
 `
 
 export const Name = styled.div`
@@ -41,6 +38,7 @@ export const Name = styled.div`
   font-weight: bold;
   font-size: 32px;
   color: #eee;
+  width: 50%;
 `
 
 export const Description = styled.div`
@@ -61,6 +59,7 @@ export const Price = styled.div`
   font-size: 22px;
   line-height: 26px;
   padding: 0.5em 0;
+  width: 50%;
 
   color: #eeeeee;
 `

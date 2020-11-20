@@ -4,6 +4,8 @@ export const Backdrop = styled.div`
   position: fixed;
   display: block;
   visibility: ${({ isOpen }) => (isOpen ? "visible" : "hidden")};
+  opacity: ${({ isOpen }) => (isOpen ? "1" : "0")};
+
   top: 0;
   left: 0;
   width: 100%;
@@ -13,4 +15,5 @@ export const Backdrop = styled.div`
   background-size: cover;
   z-index: 1;
   overflow-y: hidden;
+  transition: 0.5s ease-in-out;
 `

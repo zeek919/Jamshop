@@ -28,7 +28,7 @@ function HomepageHero() {
             on boring things
           </H1>
           <ButtonPosition>
-            <BasicButton onClickHandler={() => console.log(true)}>
+            <BasicButton animation onClickHandler={() => console.log(true)}>
               GO EXPLORE
             </BasicButton>
           </ButtonPosition>
