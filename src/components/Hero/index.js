@@ -1,4 +1,5 @@
 import React from "react"
+import createMarkup from "../../functions/createMarkup"
 
 import HeroBackground from "../../assets/elements/hero_background.svg"
 import HeroImage from "../../assets/elements/monitor.svg"
@@ -14,28 +15,54 @@ import {
   ButtonPosition,
 } from "./StyledComponents"
 import BasicButton from "../BasicButton"
+import { graphql, StaticQuery } from "gatsby"
 
 function HomepageHero() {
   return (
-    <Section>
-      <HeroImageComponent src={HeroImage} alt="Vector Monitor" />
-      <HeroWrapper>
-        <HeroMainWrapper>
-          <Decor src={HeroDecor} />
-          <H1>
-            Don't waste time
-            <br />
-            on boring things
-          </H1>
-          <ButtonPosition>
-            <BasicButton animation onClickHandler={() => console.log(true)}>
-              GO EXPLORE
-            </BasicButton>
-          </ButtonPosition>
-        </HeroMainWrapper>
-        <HeroBackgroundComponent src={HeroBackground} />
-      </HeroWrapper>
-    </Section>
+    <StaticQuery
+      query={graphql`
+        query {
+          allGraphCmsHero {
+            nodes {
+              title
+              image
+            }
+          }
+
+          allGraphCmsCta {
+            nodes {
+              text
+              href
+            }
+          }
+        }
+      `}
+      render={({ allGraphCmsHero, allGraphCmsCta }) => {
+        const { title, image } = allGraphCmsHero.nodes[0]
+        const { text, href } = allGraphCmsCta.nodes[0]
+
+        return (
+          <Section>
+            <HeroImageComponent src={HeroImage} alt={image} />
+            <HeroWrapper>
+              <HeroMainWrapper>
+                <Decor src={HeroDecor} />
+                <H1 dangerouslySetInnerHTML={createMarkup(title)} />
+                <ButtonPosition>
+                  <BasicButton
+                    animation
+                    onClickHandler={() => console.log(true)}
+                  >
+                    {text}
+                  </BasicButton>
+                </ButtonPosition>
+              </HeroMainWrapper>
+              <HeroBackgroundComponent src={HeroBackground} />
+            </HeroWrapper>
+          </Section>
+        )
+      }}
+    />
   )
 }
 

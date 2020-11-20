@@ -32,6 +32,12 @@ export const Wrapper = styled(Link)`
   @media ${device.mobileL} {
     flex: 1 0 95%;
   }
+
+  &:hover {
+    background: transparent;
+    box-shadow: inset 0px 0px 10px #fff;
+    transition: 0.5s;
+  }
 `
 
 export const DataWrapper = styled.div`

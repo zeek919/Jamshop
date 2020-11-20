@@ -100,6 +100,7 @@ export const HeroBackgroundComponent = styled.img`
 export const H1 = styled.h1`
   margin-top: -1vw;
   opacity: 0;
+  margin-left: 2vw;
   animation: ${fadeInUp} 1s 0.5s ease-in-out;
   animation-fill-mode: forwards;
 
@@ -107,6 +108,7 @@ export const H1 = styled.h1`
     margin-top: 3em;
     text-align: center;
     font-size: 28px;
+    margin-left: 0;
   }
 
   @media ${device.mobile} {
@@ -115,7 +117,6 @@ export const H1 = styled.h1`
 `
 
 export const ButtonPosition = styled.div`
-  margin-left: -10%;
   opacity: 0;
   animation: ${fadeInUp} 1s 1s ease-in-out;
   animation-fill-mode: forwards;

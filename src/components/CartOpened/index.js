@@ -6,8 +6,8 @@ import BasicButton from "../BasicButton"
 
 export default function CartOpened() {
   const productsData = useSelector((state) => state.cardsData)
-  const productsMap = productsData.map((product) => (
-    <CartProduct price={product.price} number={1} name={product.name} />
+  const productsMap = productsData.map(({ price, count, name }) => (
+    <CartProduct price={price} number={count} name={name} />
   ))
 
   return (

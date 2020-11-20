@@ -8,19 +8,38 @@ import {
   CardsWrapper,
 } from "./StyledComponents"
 import ProductQuery from "../../containers/ProductQuery"
+import { graphql, StaticQuery } from "gatsby"
 
 export default function ProductList() {
   return (
-    <Wrapper>
-      <TextWrapper>
-        <H2>Explore community choices </H2>
-        <P>Updated daily based on most popular choices among dev community</P>
-      </TextWrapper>
-      <ProductsWrapper>
-        <CardsWrapper>
-          <ProductQuery orderStart={(idx) => handleChangeOrder(idx)} />
-        </CardsWrapper>
-      </ProductsWrapper>
-    </Wrapper>
+    <StaticQuery
+      query={graphql`
+        query {
+          allGraphCmsIndex {
+            nodes {
+              title
+              lead
+            }
+          }
+        }
+      `}
+      render={({ allGraphCmsIndex }) => {
+        console.log(allGraphCmsIndex.nodes)
+        const { title, lead } = allGraphCmsIndex.nodes[0]
+        return (
+          <Wrapper>
+            <TextWrapper>
+              <H2>{title}</H2>
+              <P>{lead}</P>
+            </TextWrapper>
+            <ProductsWrapper>
+              <CardsWrapper>
+                <ProductQuery orderStart={(idx) => handleChangeOrder(idx)} />
+              </CardsWrapper>
+            </ProductsWrapper>
+          </Wrapper>
+        )
+      }}
+    />
   )
 }

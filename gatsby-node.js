@@ -7,8 +7,8 @@ exports.createPages = async ({ graphql, actions }) => {
   )
   const query = await graphql(`
     {
-      jamshop {
-        products {
+      allGraphCmsProduct {
+        nodes {
           name
           slug
           price
@@ -22,9 +22,9 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `)
 
-  const { products } = query.data.jamshop
+  const { allGraphCmsProduct } = query.data
 
-  products.forEach((product) => {
+  allGraphCmsProduct.nodes.forEach((product) => {
     createPage({
       path: product.slug,
       component: CustomProductSite,

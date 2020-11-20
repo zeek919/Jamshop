@@ -16,7 +16,8 @@ const Button = styled.button`
       ? css`
           ${shake} 5s infinite
         `
-      : "AAAAAAAAAAAAAAA"};
+      : "none"};
+  transition: 0.5s;
 
   &:hover {
     background-color: transparent;

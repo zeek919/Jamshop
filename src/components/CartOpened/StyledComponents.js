@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { device } from "../../styles/Constants"
 
 export const Wrapper = styled.div`
   width: 280px;
@@ -13,6 +14,14 @@ export const Wrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+
+  @media ${device.mobileL} {
+    right: 3em;
+  }
+
+  @media ${device.mobileL} {
+    right: 1em;
+  }
 `
 
 export const Inner = styled.table`

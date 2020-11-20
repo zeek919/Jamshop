@@ -7,6 +7,7 @@ export default function BasicButton({
   onClickHandler,
   smaller,
   animation,
+  href,
 }) {
   return (
     <Button
@@ -14,6 +15,7 @@ export default function BasicButton({
       onClick={onClickHandler}
       smaller={smaller}
       animation={animation}
+      href={href}
     >
       {children}
     </Button>
@@ -25,10 +27,12 @@ BasicButton.propTypes = {
   children: PropTypes.string,
   onClickHandler: PropTypes.func.isRequired,
   animation: PropTypes.bool,
+  href: PropTypes.string,
 }
 
 BasicButton.defaultProps = {
   smaller: false,
   children: "",
   animation: false,
+  href: "",
 }

@@ -8,9 +8,18 @@ const initialState = {
 export const CardManagementReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_TO_CART: {
+      const { name, price } = action.payload
+      const { cardsData } = state
+
+      const defaultValue = {
+        name,
+        price,
+        count: 1,
+      }
+
       return {
         ...state,
-        cardsData: [...state.cardsData, action.payload],
+        cardsData: { name, price },
       }
     }
     case CHANGE_MODAL_STATE: {

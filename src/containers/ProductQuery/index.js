@@ -1,15 +1,14 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
-import ProductCard from "../../components/ProductCard"
 import Slider from "../Slider"
 
-export default function ProductQuery({ orderStart }) {
+export default function ProductQuery() {
   return (
     <StaticQuery
       query={graphql`
         query {
-          jamshop {
-            products {
+          allGraphCmsProduct {
+            nodes {
               name
               slug
               price
@@ -22,7 +21,9 @@ export default function ProductQuery({ orderStart }) {
           }
         }
       `}
-      render={({ jamshop: { products } }) => <Slider productData={products} />}
+      render={({ allGraphCmsProduct: { nodes } }) => (
+        <Slider productData={nodes} />
+      )}
     />
   )
 }
