@@ -1,0 +1,9 @@
+fragment Cta on Cta {
+  stage
+  remoteId: id
+  createdAt
+  updatedAt
+  publishedAt
+  text
+  href
+}

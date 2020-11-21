@@ -1,0 +1,9 @@
+fragment Hero on Hero {
+  stage
+  remoteId: id
+  createdAt
+  updatedAt
+  publishedAt
+  image
+  title
+}

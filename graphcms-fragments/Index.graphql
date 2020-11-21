@@ -1,0 +1,9 @@
+fragment Index on Index {
+  stage
+  remoteId: id
+  createdAt
+  updatedAt
+  publishedAt
+  title
+  lead
+}
