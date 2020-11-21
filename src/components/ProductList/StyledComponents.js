@@ -1,16 +1,21 @@
 import styled from "styled-components"
 import { device } from "../../styles/Constants"
 import { themeColor, themeFont } from "../../styles/Themes"
+import { fadeInUp } from "../../styles/Animations"
 
 export const Wrapper = styled.section`
   display: flex;
   flex-direction: column;
   margin-top: 15vh;
   margin-bottom: 5vh;
+  opacity: 0;
 
   @media ${device.laptop} {
     margin-top: 8vw;
   }
+
+  animation: ${fadeInUp} 1s 2s;
+  animation-fill-mode: forwards;
 `
 
 export const TextWrapper = styled.div`

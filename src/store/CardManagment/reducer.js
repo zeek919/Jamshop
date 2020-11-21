@@ -11,10 +11,6 @@ export const CardManagementReducer = (state = initialState, action) => {
       const { price, name } = action.payload
       const { cardsData } = state
 
-      //OK Jesli tablica jest pusta
-      //  Jesli w tablicy jest szukany produkt
-      //  Jesli w tablicy nie ma szukanego produktu
-      //  Jesli jest wiele produktow
       if (!cardsData.length)
         return {
           ...state,
@@ -35,28 +31,6 @@ export const CardManagementReducer = (state = initialState, action) => {
         }
       })
 
-      const removeCurrentSearched = cardsData.filter((val) => {
-        return val.name !== name
-      })
-
-      const ifExistCondition = () => {
-        if (removeCurrentSearched.length > 0) {
-          return new Set([...searchForProduct, removeCurrentSearched])
-        }
-
-        return new Set([...searchForProduct])
-      }
-
-      const removeDuplicate = new Set([
-        ...searchForProduct,
-        removeCurrentSearched,
-      ])
-      const finalData = [...searchForProduct]
-
-      console.log("szukany prod", searchForProduct)
-      console.log("filtr tablicy", removeCurrentSearched)
-      console.log("set", removeDuplicate)
-      console.log("wynik", ifExistCondition())
       return {
         ...state,
         cardsData: [...searchForProduct],
