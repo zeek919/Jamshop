@@ -11,29 +11,9 @@ export const CardManagementReducer = (state = initialState, action) => {
       const { price, name } = action.payload
       const { cardsData } = state
 
-      if (!cardsData.length)
-        return {
-          ...state,
-          cardsData: [{ price, name, count: 1 }],
-        }
-
-      const searchForProduct = cardsData.map((product) => {
-        if (product.name === name)
-          return {
-            ...product,
-            count: product.count + 1,
-          }
-
-        return {
-          price,
-          name,
-          count: 1,
-        }
-      })
-
       return {
         ...state,
-        cardsData: [...searchForProduct],
+        cardsData: [...cardsData, { name, price }],
       }
     }
     case CHANGE_MODAL_STATE: {
