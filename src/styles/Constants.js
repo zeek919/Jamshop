@@ -5,4 +5,5 @@ export const device = {
   laptop: "(max-width: 950px)",
   desktopS: "(max-width: 1100px)",
   desktopM: "(max-width: 1550px)",
+  desktop: "(max-width: 1750px)",
 }

@@ -1,19 +1,20 @@
 import styled from "styled-components"
+import { themeColor } from "../../styles/Themes"
 
 export const CircleAddButton = styled.button`
   width: 44px;
   height: 44px;
-  background-color: #ab528d;
+  background-color: ${themeColor.pink};
   border: none;
   border-radius: 50%;
-  color: #ffffff;
+  color: ${themeColor.white};
   font-size: 32px;
 
   &:hover {
     background-color: transparent;
-    border: 2px solid #f8af23;
-    color: #f8af23;
-    box-shadow: 0px 0px 20px #f8af23;
+    border: 2px solid ${themeColor.hover};
+    color: ${themeColor.hover};
+    box-shadow: 0px 0px 20px ${themeColor.hover};
 
     transition: 0.5s;
   }

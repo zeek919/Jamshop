@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import { fadeFromUp } from "../../styles/Animations"
 import { device } from "../../styles/Constants"
+import { themeColor, themeFont, themeWeight } from "../../styles/Themes"
 
 export const CartWrapper = styled.button`
   position: absolute;
@@ -11,9 +12,9 @@ export const CartWrapper = styled.button`
   align-items: center;
   background: transparent;
   border: none;
-  color: #fff;
-  font-family: "Roboto";
-  font-weight: 200;
+  color: ${themeColor.white};
+  font-family: ${themeFont.roboto};
+  font-weight: ${themeWeight.light};
   z-index: 3;
 
   &:focus {
@@ -38,13 +39,13 @@ export const ProductCount = styled.div`
   margin-top: -25px;
   margin-left: 25px;
   border-radius: 50%;
-  background-color: ${({ isEmpty }) => (isEmpty > 0 ? "#AB528D" : "#301346")};
+  background-color: ${({ isEmpty }) =>
+    isEmpty > 0 ? themeColor.pink : themeColor.black};
   font-size: 8px;
-  font-family: Roboto;
+  font-family: ${themeFont.roboto};
   width: 12px;
   height: 13px;
   text-align: center;
-  font-weight: 400;
   transition: 0.5s;
 `
 

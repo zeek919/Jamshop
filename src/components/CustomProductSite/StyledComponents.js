@@ -1,10 +1,11 @@
 import styled from "styled-components"
 import { device } from "../../styles/Constants"
+import { themeColor, themeFont, themeWeight } from "../../styles/Themes"
 
 export const Wrapper = styled.section`
   width: 100vw;
   height: 100%;
-  background-color: #1c042e;
+  background-color: ${themeColor.background};
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -42,7 +43,7 @@ export const Information = styled.div`
 
 export const Tag = styled.div`
   color: #fbe067;
-  font-family: Roboto;
+  font-family: ${themeFont.roboto};
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -51,34 +52,34 @@ export const Tag = styled.div`
 `
 
 export const Name = styled.div`
-  font-family: Roboto;
+  font-family: ${themeFont.roboto};
   padding: 0.5em 0;
   font-style: 700;
-  font-weight: bold;
+  font-weight: ${themeWeight.bold};
   font-size: 32px;
-  color: #eee;
+  color: ${themeColor.milkyWhite};
   width: 50%;
 `
 
 export const Description = styled.div`
-  font-family: Roboto;
+  font-family: ${themeFont.roboto};
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
   width: 50%;
 
-  color: #c4c4c4;
+  color: ${themeColor.grey};
 `
 
 export const Price = styled.div`
-  font-family: Roboto;
+  font-family: ${themeFont.roboto};
   font-style: normal;
-  font-weight: bold;
+  font-weight: ${themeWeight.bold};
   font-size: 22px;
   line-height: 26px;
   padding: 0.5em 0;
   width: 50%;
 
-  color: #eeeeee;
+  color: ${themeColor.milkyWhite};
 `

@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import { device } from "../../styles/Constants"
+import { themeColor, themeFont } from "../../styles/Themes"
 
 export const Wrapper = styled.section`
   display: flex;
@@ -46,10 +47,10 @@ export const ProductsWrapper = styled.div`
 `
 
 export const H2 = styled.h2`
-  font-family: Montserrat;
+  font-family: ${themeFont.montserrat};
   font-size: 28px;
   font-weight: 700;
-  color: #eeeeee;
+  color: ${themeColor.milkyWhite};
 
   @media ${device.laptop} {
     font-size: 24px;
@@ -61,11 +62,11 @@ export const H2 = styled.h2`
 `
 
 export const P = styled.p`
-  font-family: "Montserrat", sans-serif;
+  font-family: ${themeFont.montserrat}, sans-serif;
   font-weight: 200;
   font-size: 16px;
   width: 300px;
-  color: #c4c4c4;
+  color: ${themeColor.grey};
 
   @media ${device.laptop} {
     font-size: 14px;

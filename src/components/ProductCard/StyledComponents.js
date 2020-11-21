@@ -1,17 +1,21 @@
 import styled from "styled-components"
 import { Link } from "gatsby"
 import { device } from "../../styles/Constants"
+import { themeColor, themeFont, themeWeight } from "../../styles/Themes"
+
+const background = "#331f41"
+const border = "#969393"
 
 export const Wrapper = styled(Link)`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #331f41;
+  background-color: ${background};
   width: 265px;
   height: 273px;
-  border: 3px solid #969393;
-  order: ${(props) => props.flexOrder};
+  border: 3px solid ${border};
+  order: ${(props) => props.order};
   flex: 1 0 21%;
   margin: 0 2%;
 
@@ -35,9 +39,12 @@ export const Wrapper = styled(Link)`
 
   &:hover {
     background: transparent;
-    box-shadow: inset 0px 0px 10px #fff;
+    border: 3px solid ${themeColor.hover};
+    box-shadow: inset 0px 0px 10px ${themeColor.hover};
     transition: 0.5s;
   }
+
+  transition: 0.5s;
 `
 
 export const DataWrapper = styled.div`
@@ -46,7 +53,7 @@ export const DataWrapper = styled.div`
 `
 
 export const TextWrapper = styled.div`
-  font-family: Montserrat, sans-serif;
+  font-family: ${themeFont.montserrat}, sans-serif;
   margin-right: 20px;
   padding: 10px;
   display: flex;
@@ -60,10 +67,10 @@ export const ButtonWrapper = styled.div`
 `
 
 export const H3 = styled.h3`
-  font-weight: 700;
+  font-weight: ${themeWeight.bold};
   margin: 0;
   font-size: 18px;
-  color: #eeeeee;
+  color: ${themeColor.milkyWhite};
   text-transform: uppercase;
   width: 100%;
   margin-bottom: 1em;
@@ -85,10 +92,9 @@ export const H3 = styled.h3`
 `
 
 export const P = styled.p`
-  font-weight: 400;
   font-size: 14px;
   margin: 0;
-  color: #c4c4c4;
+  color: ${themeColor.grey};
 
   @media ${device.desktopM} {
     font-size: 12px;

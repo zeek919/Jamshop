@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import { fadeInUp, slideIn } from "../../styles/Animations"
 import { device } from "../../styles/Constants"
+import { themeColor, themeFont, themeWeight } from "../../styles/Themes"
 
 export const Section = styled.section`
   margin: 0;
@@ -22,9 +23,9 @@ export const HeroWrapper = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  color: #e4e3e3;
-  font-family: Georgia, sans-serif;
-  font-weight: 700;
+  color: ${themeColor.h1};
+  font-family: ${themeFont.georgia}, sans-serif;
+  font-weight: ${themeWeight.bold};
   font-size: 28px;
 `
 

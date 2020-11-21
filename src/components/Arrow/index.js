@@ -12,8 +12,8 @@ export default function Arrow({ isOpen, isVisible }) {
 }
 
 Arrow.propTypes = {
-  isOpen: PropTypes.oneOf([number, bool]),
-  isVisible: PropTypes.bool,
+  isOpen: PropTypes.oneOfType([number, bool]),
+  isVisible: PropTypes.oneOfType([number, bool]),
 }
 
 Arrow.defaultProps = {

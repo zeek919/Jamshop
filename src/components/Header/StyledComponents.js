@@ -2,6 +2,7 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 import { fadeFromUp } from "../../styles/Animations"
 import { device } from "../../styles/Constants"
+import { themeColor, themeFont, themeWeight } from "../../styles/Themes"
 
 export const Wrapper = styled.div`
   margin-top: 17px;
@@ -13,10 +14,10 @@ export const Wrapper = styled.div`
 
 export const HeaderLink = styled(Link)`
   position: relative;
-  font-family: Montserrat;
-  font-weight: 700;
+  font-family: ${themeFont.montserrat};
+  font-weight: ${themeWeight.bold};
   font-size: 22px;
-  color: white;
+  color: ${themeColor.white};
   text-decoration: none;
   margin-top: 17px;
   margin-left: 57px;

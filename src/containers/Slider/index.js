@@ -31,7 +31,7 @@ export default function Slider({ productData }) {
   }
 
   const renderSliders = productData.map((item, index) => (
-    <ProductCard data={item} order={generateOrder(index)} />
+    <ProductCard data={item} order={generateOrder(index)} key={index} />
   ))
 
   return (

@@ -15,6 +15,7 @@ import BasicButton from "../BasicButton"
 import { useDispatch } from "react-redux"
 
 import { AddProductToCart } from "../../store/CardManagment/actions"
+import SEO from "../SEO"
 
 export default function CustomProductSite({
   pathContext: {
@@ -24,6 +25,7 @@ export default function CustomProductSite({
   const dispatch = useDispatch()
   return (
     <Layout>
+      <SEO title={name} description={description} lang={"en"} />
       <GlobalStyle />
       <Wrapper>
         <Img src={dumy} />

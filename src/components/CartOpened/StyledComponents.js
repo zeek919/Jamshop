@@ -1,14 +1,15 @@
 import styled from "styled-components"
 import { device } from "../../styles/Constants"
+import { themeColor } from "../../styles/Themes"
 
 export const Wrapper = styled.div`
   width: 280px;
   height: 280px;
-  position: absolute !important;
+  position: absolute;
   top: 3em;
   right: 4em;
-  background: #220538;
-  border: 2px solid #f5f5f5;
+  background-color: ${themeColor.cart};
+  border: 2px solid ${themeColor.cartBorder};
   border-radius: 4px;
   display: flex;
   flex-direction: column;
@@ -47,7 +48,7 @@ export const Inner = styled.table`
   ::-webkit-scrollbar-thumb {
     border-radius: 10px;
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
-    background-color: #eee;
+    background-color: ${themeColor.milkyWhite};
   }
 `
 

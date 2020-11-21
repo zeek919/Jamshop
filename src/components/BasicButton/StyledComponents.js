@@ -1,16 +1,17 @@
 import styled, { css } from "styled-components"
 import { shake } from "../../styles/Animations"
+import { themeColor, themeWeight } from "../../styles/Themes"
 
 const Button = styled.button`
   width: ${({ smaller }) => (smaller ? "8em" : "10em")};
   height: ${({ smaller }) => (smaller ? "2em" : "3em")};
   text-transform: uppercase;
-  background-color: #ab528d;
+  background-color: ${themeColor.pink};
   border: none;
-  color: #ffffff;
+  color: ${themeColor.white};
   font-size: 13px;
   border-radius: ${({ smaller }) => (smaller ? "0px" : "4px")};
-  font-weight: 700;
+  font-weight: ${themeWeight.bold};
   animation: ${({ animation }) =>
     animation
       ? css`
@@ -21,9 +22,9 @@ const Button = styled.button`
 
   &:hover {
     background-color: transparent;
-    border: 2px solid #f8af23;
-    color: #f8af23;
-    box-shadow: 0px 0px 20px #f8af23;
+    border: 2px solid ${themeColor.hover};
+    color: ${themeColor.hover};
+    box-shadow: 0px 0px 20px ${themeColor.hover};
 
     transition: 0.5s;
   }

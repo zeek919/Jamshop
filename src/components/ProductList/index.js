@@ -24,7 +24,6 @@ export default function ProductList() {
         }
       `}
       render={({ allGraphCmsIndex }) => {
-        console.log(allGraphCmsIndex.nodes)
         const { title, lead } = allGraphCmsIndex.nodes[0]
         return (
           <Wrapper>
@@ -34,7 +33,7 @@ export default function ProductList() {
             </TextWrapper>
             <ProductsWrapper>
               <CardsWrapper>
-                <ProductQuery orderStart={(idx) => handleChangeOrder(idx)} />
+                <ProductQuery />
               </CardsWrapper>
             </ProductsWrapper>
           </Wrapper>

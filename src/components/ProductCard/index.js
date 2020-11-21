@@ -9,7 +9,7 @@ import {
   Img,
   ImgPosition,
 } from "./StyledComponents"
-import temporary from "../../assets/products/dumy.svg"
+import dumy from "../../assets/products/dumy.svg"
 import AddToCartButton from "../AddToCartButton"
 import PropTypes from "prop-types"
 import { useDispatch } from "react-redux"
@@ -27,13 +27,9 @@ export default function ProductCard({
   }
 
   return (
-    <Wrapper
-      flexOrder={order}
-      to={`/${slug}`}
-      onClick={(e) => e.stopPropagation()}
-    >
+    <Wrapper order={order} to={`/${slug}`} onClick={(e) => e.stopPropagation()}>
       <ImgPosition>
-        <Img src={temporary} alt={image} />
+        <Img src={dumy} alt={image} />
       </ImgPosition>
       <DataWrapper>
         <TextWrapper>
@@ -49,5 +45,6 @@ export default function ProductCard({
 }
 
 ProductCard.propTypes = {
+  data: PropTypes.object.isRequired,
   order: PropTypes.number.isRequired,
 }

@@ -52,6 +52,7 @@ function HomepageHero() {
                   <BasicButton
                     animation
                     onClickHandler={() => console.log(true)}
+                    href={href}
                   >
                     {text}
                   </BasicButton>
